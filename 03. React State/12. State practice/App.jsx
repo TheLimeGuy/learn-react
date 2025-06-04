@@ -3,10 +3,10 @@ import React from "react"
 export default function App() {
     const [stateCount, setStateCount] = React.useState(0) 
     function handleClickPlus(){
-        setStateCount(stateCount+1)
+        setStateCount((prevCount) => prevCount+1)
     }
     function handleClickMinus(){
-        setStateCount(stateCount-1)
+        setStateCount((prevCount) => prevCount-1)
     }
     return (
         <main className="container">
