@@ -1,12 +1,12 @@
 import React from "react"
 
 export default function App() {
-    const [stateCount,setStateCount] = React.useState(0) 
+    const [stateCount, setStateCount] = React.useState(0) 
     function handleClickPlus(){
-        console.log("ADD")
+        setStateCount(stateCount+1)
     }
     function handleClickMinus(){
-        console.log("MINUS")
+        setStateCount(stateCount-1)
     }
     return (
         <main className="container">
