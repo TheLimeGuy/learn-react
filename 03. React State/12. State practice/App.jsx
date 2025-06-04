@@ -1,6 +1,7 @@
 import React from "react"
 
 export default function App() {
+    let [stateCount,setStateCount] = React.useState(0)
     /**
      * Challenge: 
      * Create state to track our count value (initial value is 0)
@@ -11,7 +12,7 @@ export default function App() {
             <h1>How many times will Bob say "state" in this section?</h1>
             <div className="counter">
                 <button className="minus" aria-label="Decrease count">–</button>
-                <h2 className="count">0</h2>
+                <h2 className="count">{stateCount}</h2>
                 <button className="plus" aria-label="Increase count">+</button>
             </div>
         </main>
