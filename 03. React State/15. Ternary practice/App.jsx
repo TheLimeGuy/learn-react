@@ -2,7 +2,7 @@ import React from 'react'
 export default function App() {
     const [isGoingOut, setIsGoingOut] = React.useState("Yes")
     function handleClick(){
-        (isGoingOut=="Yes") ? setIsGoingOut("No") : setIsGoingOut("Yes")
+        (isGoingOut==="Yes") ? setIsGoingOut("No") : setIsGoingOut("Yes")
     }   
     return (
         <main>
