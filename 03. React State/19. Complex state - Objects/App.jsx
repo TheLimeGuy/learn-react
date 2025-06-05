@@ -36,7 +36,7 @@ export default function App() {
                         className="favorite-button"
                     >
                         <img
-                            src={starEmpty}
+                            src={contact.isFavorite ? starFilled : starEmpty}
                             alt="empty star icon"
                             className="favorite"
                         />
