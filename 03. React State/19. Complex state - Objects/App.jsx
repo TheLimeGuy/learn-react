@@ -9,7 +9,7 @@ export default function App() {
         lastName: "Doe",
         phone: "+1 (212) 555-1212",
         email: "itsmyrealname@example.com",
-        isFavorite: false
+        isFavorite: true
     })
     /**
      * Challenge: Fill in the values in the markup
@@ -21,6 +21,23 @@ export default function App() {
         console.log("Toggle Favorite")
     }
 
+    const image = {
+        source: "",
+        label: "",
+        alternative: "",
+        pressed: false
+    }
+        if (contact.isFavorite){
+            image.source = starFilled
+            image.label = "Remove from favorites"
+            image.pressed = contact.isFavorite
+            image.alternative = "filled star icon"
+        }else{
+            image.source = starEmpty
+            image.label = "Add to favorites"
+            image.pressed = contact.isFavorite
+            image.alternative = "empty star icon"
+        }
     return (
         <main>
             <article className="card">
@@ -36,9 +53,11 @@ export default function App() {
                         className="favorite-button"
                     >
                         <img
-                            src={contact.isFavorite ? starFilled : starEmpty}
-                            alt="empty star icon"
+                            src={image.source}
                             className="favorite"
+                            alt={image.alternative}
+                            aria-label={image.label}
+                            aria-pressed={image.pressed}
                         />
                     </button>
                     <h2 className="name">
